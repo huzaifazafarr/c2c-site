@@ -5,46 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C2C - Campus to Corporate</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <header>
-        <div class="navbar">
-            <div class="logo-group">
-                <img src="images/logo.png" alt="C2C Logo" class="logo-img">
-                <div class="logo-text">
-                    <span class="brand">C2C</span>
-                    <span class="tagline">Campus to Corporate</span>
-                </div>
+    <header class="navbar">
+        <div class="logo-group">
+            <img src="images/logo.png" alt="C2C Logo" class="logo-img">
+            <div class="logo-text">
+                <span class="brand-name">C2C</span>
+                <span class="tagline">Campus to Corporate</span>
             </div>
-            <nav>
-                <a href="#services">Services</a>
-                <a href="#pricing">Pricing</a>
-                <a href="#about">About</a>
-                <button class="btn-maroon">Get Started</button>
-            </nav>
         </div>
+        <nav>
+            <a href="#services">Services</a>
+            <a href="#">Pricing</a>
+            <a href="#">About</a>
+            <a href="#" class="btn-red">Get Started</a>
+        </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <span class="badge">🎓 Empowering Pakistani Students</span>
-            <h1>Your Bridge from <br> Campus to Corporate</h1>
-            <p>Professional CVs, ATS checks, and Mentorship—built for Pakistani students, priced for Pakistani pockets.</p>
-            <div class="hero-actions">
-                <button class="btn-white">Get Your CV Reviewed (Rs. 600)</button>
-                <button class="btn-outline">Free ATS Check</button>
+        <div class="hero-container">
+            <div class="hero-text">
+                <span class="badge">🎓 Empowering Pakistani Students</span>
+                <h1>Your Bridge from <br> Campus to Corporate</h1>
+                <p>Professional CVs, ATS checks, and Mentorship—built for Pakistani students, priced for Pakistani pockets.</p>
+                <div class="hero-buttons">
+                    <button class="btn-white">Get Your CV Reviewed (Rs. 600)</button>
+                    <button class="btn-outline">Free ATS Check</button>
+                </div>
+                <div class="stats">
+                    <div class="stat-item"><strong>2000+</strong><br>Students Helped</div>
+                    <div class="stat-item"><strong>50+</strong><br>Universities</div>
+                    <div class="stat-item"><strong>95%</strong><br>Success Rate</div>
+                </div>
             </div>
-            <div class="stats">
-                <span><strong>2000+</strong> Students Helped</span>
-                <span><strong>50+</strong> Universities</span>
-                <span><strong>95%</strong> Success Rate</span>
+            <div class="hero-image">
+                <img src="images/hero.jpg" alt="IBA Campus">
             </div>
-        </div>
-        <div class="hero-image">
-            <img src="images/hero.jpg" alt="IBA Campus">
         </div>
     </section>
 
+    <section id="services" class="services-section">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="card-content">
+                    <h3>CV Making</h3>
+                    <p>ATS-optimized CVs.</p>
+                    <span class="price">Rs. 600</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-content">
+                    <h3>ATS Checker</h3>
+                    <p>Instant compatibility score.</p>
+                    <span class="price">Free</span>
+                </div>
+            </div>
+            <div class="service-card">
+                <div class="card-content">
+                    <h3>Counselling</h3>
+                    <p>1-on-1 career guidance.</p>
+                    <span class="price">Rs. 1,000</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
