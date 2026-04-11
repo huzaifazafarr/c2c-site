@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C2C - Campus to Corporate</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="navbar">
         <div class="logo-group">
             <img src="images/logo.png" alt="C2C Logo" class="logo-img">
-            <div class="logo-text">
+            <div class="logo-info">
                 <span class="brand-name">C2C</span>
                 <span class="tagline">Campus to Corporate</span>
             </div>
@@ -20,56 +20,127 @@
             <a href="#services">Services</a>
             <a href="#">Pricing</a>
             <a href="#">About</a>
-            <a href="#" class="btn-red">Get Started</a>
+            <a href="#" class="btn-get-started">Get Started</a>
         </nav>
     </header>
 
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
-                <span class="badge">🎓 Empowering Pakistani Students</span>
-                <h1>Your Bridge from <br> Campus to Corporate</h1>
+                <div class="badge-row">
+                    <span class="hero-badge">🎓 Empowering Pakistani Students</span>
+                </div>
+                <h1>Your Bridge from <br>Campus to Corporate</h1>
                 <p>Professional CVs, ATS checks, and Mentorship—built for Pakistani students, priced for Pakistani pockets.</p>
                 <div class="hero-buttons">
-                    <button class="btn-white">Get Your CV Reviewed (Rs. 600)</button>
-                    <button class="btn-outline">Free ATS Check</button>
+                    <button class="btn-primary">Get Your CV Reviewed (Rs. 600)</button>
+                    <button class="btn-secondary">Free ATS Check</button>
                 </div>
-                <div class="stats">
-                    <div class="stat-item"><strong>2000+</strong><br>Students Helped</div>
-                    <div class="stat-item"><strong>50+</strong><br>Universities</div>
-                    <div class="stat-item"><strong>95%</strong><br>Success Rate</div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>2000+</strong><span>Students Helped</span></div>
+                    <div class="stat"><strong>50+</strong><span>Universities</span></div>
+                    <div class="stat"><strong>95%</strong><span>Success Rate</span></div>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="images/hero.jpg" alt="IBA Campus">
+            <div class="hero-image-wrapper">
+                <img src="images/hero.jpg" alt="IBA Campus" class="main-hero-img">
+                <div class="floating-price-card">
+                    <div class="price-icon">💼</div>
+                    <div>
+                        <strong>Affordable Pricing</strong>
+                        <span>Starting from Rs. 600</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services-section">
-        <h2 class="section-title">Our Services</h2>
+    <section id="services" class="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Affordable, professional solutions designed specifically for Pakistani students.</p>
+        </div>
+        
         <div class="services-grid">
             <div class="service-card">
-                <div class="card-content">
-                    <h3>CV Making</h3>
-                    <p>ATS-optimized CVs.</p>
-                    <span class="price">Rs. 600</span>
+                <div class="card-img" style="background-image: url('images/cv-service.jpg');">
+                    <span class="tag popular">Most Popular</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <div class="service-icon">📄</div>
+                        <span class="price">Rs. 600</span>
+                    </div>
+                    <h3>CV Making Service</h3>
+                    <p>ATS-optimized professional CV tailored to your field. Get noticed by recruiters and beat the automated screening.</p>
+                    <ul>
+                        <li>ATS-friendly formatting</li>
+                        <li>Industry-specific keywords</li>
+                        <li>2 rounds of revisions</li>
+                        <li>48-hour delivery</li>
+                    </ul>
+                    <button class="btn-card">Get Started</button>
                 </div>
             </div>
+
             <div class="service-card">
-                <div class="card-content">
-                    <h3>ATS Checker</h3>
-                    <p>Instant compatibility score.</p>
-                    <span class="price">Free</span>
+                <div class="card-img" style="background-image: url('images/ats-service.jpg');">
+                    <span class="tag free">Free Tool</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <div class="service-icon">🔍</div>
+                        <span class="price free-text">Free</span>
+                    </div>
+                    <h3>ATS Score Checker</h3>
+                    <p>Upload your CV and get an instant ATS compatibility score with detailed improvement suggestions.</p>
+                    <ul>
+                        <li>Instant scoring</li>
+                        <li>Keyword analysis</li>
+                        <li>Format validation</li>
+                        <li>Improvement tips</li>
+                    </ul>
+                    <button class="btn-card">Get Started</button>
                 </div>
             </div>
-            <div class="service-card">
-                <div class="card-content">
-                    <h3>Counselling</h3>
-                    <p>1-on-1 career guidance.</p>
-                    <span class="price">Rs. 1,000</span>
+
+            <div class="service-card highlighted-card">
+                <div class="card-img" style="background-image: url('images/mentorship.jpg');">
+                    <span class="tag expert">Expert Guidance</span>
+                </div>
+                <div class="card-body">
+                    <div class="price-row">
+                        <div class="service-icon">👥</div>
+                        <span class="price">Rs. 1,000</span>
+                    </div>
+                    <h3>Career Counselling</h3>
+                    <p>One-on-one session with industry professionals. Get guidance on major selection, career paths, and interview prep.</p>
+                    <ul>
+                        <li>60-minute session</li>
+                        <li>Industry experts</li>
+                        <li>Personalized roadmap</li>
+                        <li>Follow-up support</li>
+                    </ul>
+                    <button class="btn-card">Get Started</button>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="trusted-section">
+        <h2>Trusted by Students from Top Universities</h2>
+        <p>Students from leading Pakistani universities trust C2C for their career journey</p>
+        <div class="uni-grid">
+            <div class="uni-card">🏛️ NUST</div>
+            <div class="uni-card">🏛️ LUMS</div>
+            <div class="uni-card">🏛️ FAST-NUCES</div>
+            <div class="uni-card">🏛️ GIKI</div>
+            <div class="uni-card">🏛️ COMSATS</div>
+            <div class="uni-card">🏛️ UET</div>
+            <div class="uni-card">🏛️ IBA</div>
+            <div class="uni-card">🏛️ NED University</div>
+            <div class="uni-card">🏛️ Punjab University</div>
+            <div class="uni-card">🏛️ Karachi University</div>
         </div>
     </section>
 </body>
