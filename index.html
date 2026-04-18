@@ -5,159 +5,766 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C2C - Campus to Corporate</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
 </head>
 <body>
-    <header class="navbar">
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
         <div class="logo-group">
-            <img src="images/logo.png" alt="C2C Logo" class="logo-img">
+            <div class="logo-icon-box">
+                <i data-lucide="graduation-cap" class="logo-icon-svg"></i>
+            </div>
             <div class="logo-info">
                 <span class="brand-name">C2C</span>
                 <span class="tagline">Campus to Corporate</span>
             </div>
         </div>
-        <nav>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <i data-lucide="menu"></i>
+        </button>
+        <nav id="main-nav">
+            <a href="#about">About</a>
             <a href="#services">Services</a>
-            <a href="#">Pricing</a>
-            <a href="#">About</a>
-            <a href="#" class="btn-get-started">Get Started</a>
+            <a href="#mentors">Mentors</a>
+            <a href="#universities">Universities</a>
+            <a href="#contact">Contact</a>
+            <a href="#cv-form" class="btn-get-started" onclick="openModal('cv-modal')">Get Started</a>
         </nav>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
         <div class="hero-container">
             <div class="hero-text">
                 <div class="badge-row">
-                    <span class="hero-badge">🎓 Empowering Pakistani Students</span>
+                    <span class="hero-badge">
+                        <i data-lucide="map-pin" style="width:14px;height:14px;"></i>
+                        IBA Karachi &mdash; Pilot 2026
+                    </span>
                 </div>
-                <h1>Your Bridge from <br>Campus to Corporate</h1>
-                <p>Professional CVs, ATS checks, and Mentorship—built for Pakistani students, priced for Pakistani pockets.</p>
+                <h1>Your Bridge from<br><span class="hero-highlight">Campus</span> to Corporate</h1>
+                <p>Professional CV reviews, ATS checks, and 1-on-1 mentorship — built for Pakistani students, priced for Pakistani pockets.</p>
                 <div class="hero-buttons">
-                    <button class="btn-primary">Get Your CV Reviewed (Rs. 600)</button>
-                    <button class="btn-secondary">Free ATS Check</button>
+                    <button class="btn-primary" onclick="openModal('cv-modal')">
+                        <i data-lucide="file-text" style="width:18px;height:18px;"></i>
+                        Get CV Reviewed — Rs. 500
+                    </button>
+                    <button class="btn-secondary" onclick="openModal('counselling-modal')">
+                        <i data-lucide="calendar" style="width:18px;height:18px;"></i>
+                        Book a Session
+                    </button>
                 </div>
                 <div class="hero-stats">
-                    <div class="stat"><strong>2000+</strong><span>Students Helped</span></div>
-                    <div class="stat"><strong>50+</strong><span>Universities</span></div>
-                    <div class="stat"><strong>95%</strong><span>Success Rate</span></div>
+                    <div class="stat">
+                        <strong>2,000+</strong>
+                        <span>Students Helped</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong>50+</strong>
+                        <span>Universities</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <strong>95%</strong>
+                        <span>Success Rate</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image-wrapper">
-                <img src="images/hero.jpg" alt="IBA Campus" class="main-hero-img">
-                <div class="floating-price-card">
-                    <div class="price-icon">💼</div>
-                    <div class="price-details">
-                        <strong>Affordable Pricing</strong>
-                        <span>Starting from Rs. 600</span>
+            <div class="hero-visual">
+                <div class="hero-card-stack">
+                    <div class="hero-card card-main">
+                        <div class="hcard-icon"><i data-lucide="shield-check"></i></div>
+                        <div>
+                            <strong>ATS-Optimised CV</strong>
+                            <p>Beat recruiter filters</p>
+                        </div>
+                    </div>
+                    <div class="hero-card card-secondary">
+                        <div class="hcard-icon accent"><i data-lucide="users"></i></div>
+                        <div>
+                            <strong>Expert Mentors</strong>
+                            <p>Real HR professionals</p>
+                        </div>
+                    </div>
+                    <div class="hero-card card-tertiary">
+                        <div class="hcard-icon green"><i data-lucide="trending-up"></i></div>
+                        <div>
+                            <strong>Career Roadmap</strong>
+                            <p>Personalized guidance</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
-        <div class="section-header">
-            <h2>Our Services</h2>
-            <p>Affordable, professional solutions designed specifically for Pakistani students.</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="card-img" style="background-image: url('images/cv-service.jpg');">
-                    <span class="tag popular">Most Popular</span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <div class="service-icon">📄</div>
-                        <span class="price">Rs. 600</span>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-left">
+                    <span class="section-label">Who We Are</span>
+                    <h2>Bridging the Gap Between Education and Employment</h2>
+                    <p>Campus to Corporate (C2C) is a student-founded, community-driven career preparation platform born at IBA Karachi. We exist because we experienced the same problem ourselves — navigating internship season without proper guidance is overwhelming.</p>
+                    <p>We connect students with real HR professionals, management trainees, and industry mentors through a structured platform that is affordable, local, and deeply understood in the Pakistani corporate context.</p>
+                    <div class="about-pills">
+                        <span class="pill"><i data-lucide="check-circle" style="width:14px;height:14px;"></i> Pakistan-specific guidance</span>
+                        <span class="pill"><i data-lucide="check-circle" style="width:14px;height:14px;"></i> Direct recruiter access</span>
+                        <span class="pill"><i data-lucide="check-circle" style="width:14px;height:14px;"></i> Student-friendly pricing</span>
+                        <span class="pill"><i data-lucide="check-circle" style="width:14px;height:14px;"></i> IBA-founded &amp; student-run</span>
                     </div>
-                    <h3>CV Making Service</h3>
-                    <p>ATS-optimized professional CV tailored to your field. Get noticed by recruiters and beat automated screening.</p>
-                    <ul class="card-list">
-                        <li>ATS-friendly formatting</li>
-                        <li>Industry-specific keywords</li>
-                        <li>2 rounds of revisions</li>
-                        <li>48-hour delivery</li>
-                    </ul>
-                    <button class="btn-card">Get Started</button>
+                </div>
+                <div class="about-right">
+                    <div class="about-cards">
+                        <div class="about-stat-card">
+                            <i data-lucide="book-open"></i>
+                            <strong>The Problem</strong>
+                            <p>Pakistan graduates hundreds of thousands of students yearly who enter the job market unprepared for what recruiters actually look for.</p>
+                        </div>
+                        <div class="about-stat-card highlight">
+                            <i data-lucide="lightbulb"></i>
+                            <strong>Our Solution</strong>
+                            <p>Structured, affordable career services — CV reviews and 1-on-1 counselling — backed by professionals who understand local hiring.</p>
+                        </div>
+                        <div class="about-stat-card">
+                            <i data-lucide="target"></i>
+                            <strong>Our Vision</strong>
+                            <p>To become Pakistan's most trusted career preparation platform, scaling from IBA Karachi to every major university across the country.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="service-card">
-                <div class="card-img" style="background-image: url('images/ats-service.jpg');">
-                    <span class="tag free">Free Tool</span>
+            <!-- Founders -->
+            <div class="founders-block">
+                <h3>Founded By</h3>
+                <div class="founders-grid">
+                    <div class="founder-card">
+                        <div class="founder-avatar">BH</div>
+                        <strong>Bareera Hameed</strong>
+                        <span>Strategy Lead</span>
+                    </div>
+                    <div class="founder-card">
+                        <div class="founder-avatar">RF</div>
+                        <strong>Rameen Farooqui</strong>
+                        <span>Marketing Lead</span>
+                    </div>
+                    <div class="founder-card">
+                        <div class="founder-avatar">JA</div>
+                        <strong>Javeria Abdul Samad</strong>
+                        <span>Finance Lead</span>
+                    </div>
+                    <div class="founder-card">
+                        <div class="founder-avatar">HZ</div>
+                        <strong>Huzaifa Zafar</strong>
+                        <span>Operations &amp; Tech Lead</span>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <div class="service-icon">🔍</div>
-                        <span class="price free-text">Free</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">What We Offer</span>
+                <h2>Our Services</h2>
+                <p>Affordable, professional solutions designed specifically for Pakistani students.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- CV Review -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <div class="svc-icon-wrap">
+                            <i data-lucide="file-text"></i>
+                        </div>
+                        <span class="svc-tag popular">Most Popular</span>
+                    </div>
+                    <h3>CV Review Service</h3>
+                    <p class="svc-desc">ATS-optimized professional CV tailored to your field. Get noticed by recruiters and beat automated screening systems.</p>
+                    <ul class="card-list">
+                        <li><i data-lucide="check"></i> ATS-friendly formatting</li>
+                        <li><i data-lucide="check"></i> Industry-specific keywords</li>
+                        <li><i data-lucide="check"></i> 2 rounds of revisions</li>
+                        <li><i data-lucide="check"></i> 48-hour delivery</li>
+                        <li><i data-lucide="check"></i> Recruiter-backed feedback</li>
+                    </ul>
+                    <div class="svc-footer">
+                        <span class="price-tag">Rs. 500</span>
+                        <button class="btn-card" onclick="openModal('cv-modal')">Get Started <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></button>
+                    </div>
+                </div>
+
+                <!-- ATS Checker -->
+                <div class="service-card">
+                    <div class="service-card-header">
+                        <div class="svc-icon-wrap blue">
+                            <i data-lucide="search"></i>
+                        </div>
+                        <span class="svc-tag free">Free Tool</span>
                     </div>
                     <h3>ATS Score Checker</h3>
-                    <p>Upload your CV and get an instant ATS compatibility score with detailed improvement suggestions.</p>
+                    <p class="svc-desc">Upload your CV and get an instant ATS compatibility score with detailed keyword and format analysis.</p>
                     <ul class="card-list">
-                        <li>Instant scoring</li>
-                        <li>Keyword analysis</li>
-                        <li>Format validation</li>
-                        <li>Improvement tips</li>
+                        <li><i data-lucide="check"></i> Instant scoring</li>
+                        <li><i data-lucide="check"></i> Keyword gap analysis</li>
+                        <li><i data-lucide="check"></i> Format validation</li>
+                        <li><i data-lucide="check"></i> Actionable improvement tips</li>
+                        <li><i data-lucide="check"></i> No payment required</li>
                     </ul>
-                    <button class="btn-card">Get Started</button>
+                    <div class="svc-footer">
+                        <span class="price-tag free-price">Free</span>
+                        <button class="btn-card btn-blue" onclick="openModal('cv-modal')">Check My CV <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></button>
+                    </div>
                 </div>
-            </div>
 
-            <div class="service-card highlighted-card">
-                <div class="card-img" style="background-image: url('images/mentorship.jpg');">
-                    <span class="tag expert">Expert Guidance</span>
-                </div>
-                <div class="card-body">
-                    <div class="price-row">
-                        <div class="service-icon">👥</div>
-                        <span class="price">Rs. 1,000</span>
+                <!-- Career Counselling -->
+                <div class="service-card highlighted-card">
+                    <div class="service-card-header">
+                        <div class="svc-icon-wrap red">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <span class="svc-tag expert">Expert Guidance</span>
                     </div>
                     <h3>Career Counselling</h3>
-                    <p>One-on-one session with industry professionals. Get guidance on major selection and career paths.</p>
+                    <p class="svc-desc">One-on-one session with industry professionals. Get a personalized roadmap for your career path and application strategy.</p>
                     <ul class="card-list">
-                        <li>60-minute session</li>
-                        <li>Industry experts</li>
-                        <li>Personalized roadmap</li>
-                        <li>Follow-up support</li>
+                        <li><i data-lucide="check"></i> 60-minute session</li>
+                        <li><i data-lucide="check"></i> Real HR professionals</li>
+                        <li><i data-lucide="check"></i> Personalized career roadmap</li>
+                        <li><i data-lucide="check"></i> Interview prep tips</li>
+                        <li><i data-lucide="check"></i> Follow-up resource sheet</li>
                     </ul>
-                    <button class="btn-card">Get Started</button>
+                    <div class="svc-footer">
+                        <span class="price-tag">Rs. 1,000</span>
+                        <button class="btn-card" onclick="openModal('counselling-modal')">Book a Session <i data-lucide="arrow-right" style="width:16px;height:16px;"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="trusted-section">
-        <div class="section-header">
-            <h2>Trusted by Students from Top Universities</h2>
-            <p>Students from leading Pakistani universities trust C2C for their career journey</p>
-        </div>
-        <div class="uni-grid">
-            <div class="uni-card">🏛️ NUST</div>
-            <div class="uni-card">🏛️ LUMS</div>
-            <div class="uni-card">🏛️ FAST-NUCES</div>
-            <div class="uni-card">🏛️ GIKI</div>
-            <div class="uni-card">🏛️ COMSATS</div>
-            <div class="uni-card">🏛️ UET</div>
-            <div class="uni-card">🏛️ IBA</div>
-            <div class="uni-card">🏛️ NED University</div>
-            <div class="uni-card">🏛️ Karachi University</div>
+    <!-- MENTORS SECTION -->
+    <section id="mentors" class="mentors-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Meet the Team</span>
+                <h2>Our Mentors</h2>
+                <p>Book a counselling session with experienced professionals who have been in your shoes.</p>
+            </div>
+            <div class="mentors-grid">
+
+                <div class="mentor-card">
+                    <div class="mentor-avatar" style="background: #f0e6ff;">
+                        <span>SA</span>
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Sara Ahmed</h4>
+                        <span class="mentor-role">HR Manager — Engro Corporation</span>
+                        <p class="mentor-bio">6+ years in talent acquisition and campus recruitment at one of Pakistan's leading conglomerates. Specialises in FMCG and manufacturing hiring.</p>
+                        <div class="mentor-tags">
+                            <span>FMCG</span>
+                            <span>HR Strategy</span>
+                            <span>Interview Prep</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="openModal('counselling-modal')">Book Session</button>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-avatar" style="background: #e6f4ff;">
+                        <span>AK</span>
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Ali Khan</h4>
+                        <span class="mentor-role">Management Trainee — Habib Bank Limited</span>
+                        <p class="mentor-bio">Completed HBL's prestigious MT programme. Guides students through banking sector applications, assessment centres, and case interviews.</p>
+                        <div class="mentor-tags">
+                            <span>Banking</span>
+                            <span>MT Programmes</span>
+                            <span>Case Studies</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="openModal('counselling-modal')">Book Session</button>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-avatar" style="background: #e6fff0;">
+                        <span>ZM</span>
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Zara Mirza</h4>
+                        <span class="mentor-role">Brand Manager — Unilever Pakistan</span>
+                        <p class="mentor-bio">IBA alumna now at Unilever's marketing division. Helps students break into FMCG marketing, build strong CVs for brand roles, and nail group discussions.</p>
+                        <div class="mentor-tags">
+                            <span>Marketing</span>
+                            <span>Brand Strategy</span>
+                            <span>FMCG</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="openModal('counselling-modal')">Book Session</button>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-avatar" style="background: #fff6e6;">
+                        <span>UR</span>
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Usman Raza</h4>
+                        <span class="mentor-role">Associate — Systems Limited</span>
+                        <p class="mentor-bio">Software engineer with experience in technical interviews, coding assessments, and landing roles in Pakistan's top IT firms. CS students' go-to mentor.</p>
+                        <div class="mentor-tags">
+                            <span>Tech / IT</span>
+                            <span>Technical Interviews</span>
+                            <span>CV for CS</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="openModal('counselling-modal')">Book Session</button>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-avatar" style="background: #ffe6e6;">
+                        <span>NH</span>
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Nida Hussain</h4>
+                        <span class="mentor-role">Finance Analyst — Packages Limited</span>
+                        <p class="mentor-bio">CFA Level 1 candidate. Guides students targeting finance roles in corporates, including FP&amp;A, treasury, and management accounting positions.</p>
+                        <div class="mentor-tags">
+                            <span>Finance</span>
+                            <span>CFA Pathway</span>
+                            <span>Corporate Finance</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="openModal('counselling-modal')">Book Session</button>
+                </div>
+
+                <div class="mentor-card">
+                    <div class="mentor-avatar" style="background: #e6eeff;">
+                        <span>BQ</span>
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Bilal Qureshi</h4>
+                        <span class="mentor-role">Strategy Consultant — TPS Pakistan</span>
+                        <p class="mentor-bio">Helps students understand consulting career tracks, structure their thinking for analytical roles, and present themselves as business-ready graduates.</p>
+                        <div class="mentor-tags">
+                            <span>Consulting</span>
+                            <span>Strategy</span>
+                            <span>Problem Solving</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="openModal('counselling-modal')">Book Session</button>
+                </div>
+
+            </div>
+            <p class="mentor-note"><i data-lucide="info" style="width:14px;height:14px;"></i> More mentors being onboarded. <a href="#contact">Get in touch</a> if you'd like to volunteer.</p>
         </div>
     </section>
 
-    <section class="placements-section">
-        <div class="section-header">
-            <h2>Our Students Work At</h2>
-            <p>Leading Pakistani companies where our students have been placed</p>
-        </div>
-        <div class="company-grid">
-            <div class="company-card">Systems Limited</div>
-            <div class="company-card">TPS</div>
-            <div class="company-card">Engro</div>
-            <div class="company-card">Unilever Pakistan</div>
-            <div class="company-card">Packages Limited</div>
-            <div class="company-card">Habib Bank</div>
+    <!-- UNIVERSITIES SECTION -->
+    <section id="universities" class="trusted-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Our Reach</span>
+                <h2>Trusted by Students from Top Universities</h2>
+                <p>Students from leading Pakistani universities trust C2C for their career journey.</p>
+            </div>
+            <div class="uni-grid">
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> IBA Karachi</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> NUST</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> LUMS</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> FAST-NUCES</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> GIKI</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> COMSATS</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> UET</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> NED University</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:16px;height:16px;"></i> Karachi University</div>
+            </div>
         </div>
     </section>
+
+    <!-- PLACEMENTS SECTION -->
+    <section class="placements-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Alumni Placements</span>
+                <h2>Our Students Work At</h2>
+                <p>Leading Pakistani companies where our students have landed roles.</p>
+            </div>
+            <div class="company-grid">
+                <div class="company-card"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> Systems Limited</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> TPS Pakistan</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> Engro Corporation</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> Unilever Pakistan</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> Packages Limited</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:16px;height:16px;"></i> Habib Bank Limited</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2>Contact Us</h2>
+                <p>Have questions? Reach out through any of the channels below.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon"><i data-lucide="message-circle"></i></div>
+                    <h4>WhatsApp Community</h4>
+                    <p>Join our student community for free tips, resources, and peer support.</p>
+                    <a href="https://wa.me/923001234567" target="_blank" class="contact-link">Join on WhatsApp <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i data-lucide="instagram"></i></div>
+                    <h4>Instagram</h4>
+                    <p>Follow us for career tips, student testimonials, and announcements.</p>
+                    <a href="https://instagram.com/c2c.iba" target="_blank" class="contact-link">@c2c.iba <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i data-lucide="mail"></i></div>
+                    <h4>Email Us</h4>
+                    <p>For partnerships, mentor onboarding, or university collaborations.</p>
+                    <a href="mailto:hello@c2c-iba.com" class="contact-link">hello@c2c-iba.com <i data-lucide="external-link" style="width:14px;height:14px;"></i></a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                    <h4>Based At</h4>
+                    <p>Institute of Business Administration, University Road, Karachi.</p>
+                    <span class="contact-link-static">IBA Karachi, Pakistan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-group">
+                    <div class="logo-icon-box footer-logo">
+                        <i data-lucide="graduation-cap" class="logo-icon-svg"></i>
+                    </div>
+                    <div class="logo-info">
+                        <span class="brand-name">C2C</span>
+                        <span class="tagline" style="color:rgba(255,255,255,0.5);">Campus to Corporate</span>
+                    </div>
+                </div>
+                <p>Empowering Pakistani students to navigate the corporate world — affordably, accessibly, authentically.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#mentors">Mentors</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h5>Services</h5>
+                <a href="#" onclick="openModal('cv-modal')">CV Review — Rs. 500</a>
+                <a href="#" onclick="openModal('counselling-modal')">Career Counselling — Rs. 1,000</a>
+                <a href="#" onclick="openModal('cv-modal')">ATS Check — Free</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Campus to Corporate (C2C) — IBA Karachi. All rights reserved.</p>
+            <p>Founded by Bareera Hameed · Rameen Farooqui · Javeria Abdul Samad · Huzaifa Zafar</p>
+        </div>
+    </footer>
+
+
+    <!-- ========================================= -->
+    <!-- CV REVIEW MODAL                          -->
+    <!-- ========================================= -->
+    <div class="modal-overlay" id="cv-modal" onclick="closeModalOnOverlay(event, 'cv-modal')">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('cv-modal')"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon"><i data-lucide="file-text"></i></div>
+                <div>
+                    <h3>CV Review Request</h3>
+                    <p>Submit your details below. We'll review your CV within 48 hours.</p>
+                </div>
+            </div>
+
+            <!-- 
+                FORMSPREE SETUP INSTRUCTIONS (Free & No Backend Needed):
+                1. Go to https://formspree.io and create a free account
+                2. Create a new form and copy your form endpoint (looks like: https://formspree.io/f/xyzabcde)
+                3. Replace the action URL below with your Formspree endpoint
+                That's it! Submissions will be emailed directly to you.
+            -->
+            <form id="cv-form-el" action="https://formspree.io/f/mdayzoza" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="New C2C CV Review Request">
+                <input type="hidden" name="_next" value="">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cv-name"><i data-lucide="user" style="width:14px;height:14px;"></i> Full Name <span class="req">*</span></label>
+                        <input type="text" id="cv-name" name="name" placeholder="e.g. Ahmed Ali" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv-erp"><i data-lucide="hash" style="width:14px;height:14px;"></i> ERP / Roll Number <span class="req">*</span></label>
+                        <input type="text" id="cv-erp" name="erp" placeholder="e.g. 12345" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="cv-semester"><i data-lucide="book-open" style="width:14px;height:14px;"></i> Semester <span class="req">*</span></label>
+                        <select id="cv-semester" name="semester" required>
+                            <option value="" disabled selected>Select semester</option>
+                            <option>1st Semester</option>
+                            <option>2nd Semester</option>
+                            <option>3rd Semester</option>
+                            <option>4th Semester</option>
+                            <option>5th Semester</option>
+                            <option>6th Semester</option>
+                            <option>7th Semester</option>
+                            <option>8th Semester</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv-phone"><i data-lucide="phone" style="width:14px;height:14px;"></i> Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="cv-phone" name="phone" placeholder="e.g. 0300-1234567" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cv-email"><i data-lucide="mail" style="width:14px;height:14px;"></i> Email Address <span class="req">*</span></label>
+                    <input type="email" id="cv-email" name="email" placeholder="e.g. ahmed@student.iba.edu.pk" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="cv-file"><i data-lucide="upload" style="width:14px;height:14px;"></i> Upload Your CV (PDF) <span class="req">*</span></label>
+                    <div class="file-upload-wrapper" id="cv-upload-wrapper">
+                        <input type="file" id="cv-file" name="cv_file" accept=".pdf,.doc,.docx" required onchange="updateFileName('cv-file', 'cv-file-label')">
+                        <label for="cv-file" id="cv-file-label">
+                            <i data-lucide="file-plus" style="width:20px;height:20px;"></i>
+                            <span>Click to upload CV (PDF, DOC, DOCX)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="cv-payment"><i data-lucide="credit-card" style="width:14px;height:14px;"></i> Payment Screenshot (EasyPaisa / JazzCash) <span class="req">*</span></label>
+                    <div class="payment-info">
+                        <i data-lucide="info" style="width:14px;height:14px;"></i>
+                        Send <strong>Rs. 500</strong> to <strong>0300-XXXXXXX</strong> (EasyPaisa/JazzCash) then upload screenshot below.
+                    </div>
+                    <div class="file-upload-wrapper" id="cv-payment-wrapper">
+                        <input type="file" id="cv-payment" name="payment_screenshot" accept="image/*" required onchange="updateFileName('cv-payment', 'cv-payment-label')">
+                        <label for="cv-payment" id="cv-payment-label">
+                            <i data-lucide="image" style="width:20px;height:20px;"></i>
+                            <span>Click to upload payment screenshot</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="cv-submit-btn">
+                    <i data-lucide="send" style="width:18px;height:18px;"></i>
+                    Submit CV Review Request
+                </button>
+                <div class="form-success" id="cv-success" style="display:none;">
+                    <i data-lucide="check-circle" style="width:20px;height:20px;"></i>
+                    Request submitted! We'll review your CV and get back to you within 48 hours.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- COUNSELLING MODAL                        -->
+    <!-- ========================================= -->
+    <div class="modal-overlay" id="counselling-modal" onclick="closeModalOnOverlay(event, 'counselling-modal')">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModal('counselling-modal')"><i data-lucide="x"></i></button>
+            <div class="modal-header">
+                <div class="modal-icon accent-icon"><i data-lucide="users"></i></div>
+                <div>
+                    <h3>Book a Counselling Session</h3>
+                    <p>Fill in your details and select your preferred mentor. We'll confirm your slot within 24 hours.</p>
+                </div>
+            </div>
+
+            <!-- 
+                Replace action URL with your Formspree endpoint for the counselling form
+            -->
+            <form id="counselling-form-el" action="https://formspree.io/f/xykljyjp" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_subject" value="New C2C Counselling Session Booking">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="c-name"><i data-lucide="user" style="width:14px;height:14px;"></i> Full Name <span class="req">*</span></label>
+                        <input type="text" id="c-name" name="name" placeholder="e.g. Fatima Malik" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-erp"><i data-lucide="hash" style="width:14px;height:14px;"></i> ERP / Roll Number <span class="req">*</span></label>
+                        <input type="text" id="c-erp" name="erp" placeholder="e.g. 12345" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="c-semester"><i data-lucide="book-open" style="width:14px;height:14px;"></i> Semester <span class="req">*</span></label>
+                        <select id="c-semester" name="semester" required>
+                            <option value="" disabled selected>Select semester</option>
+                            <option>1st Semester</option>
+                            <option>2nd Semester</option>
+                            <option>3rd Semester</option>
+                            <option>4th Semester</option>
+                            <option>5th Semester</option>
+                            <option>6th Semester</option>
+                            <option>7th Semester</option>
+                            <option>8th Semester</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="c-phone"><i data-lucide="phone" style="width:14px;height:14px;"></i> Phone Number <span class="req">*</span></label>
+                        <input type="tel" id="c-phone" name="phone" placeholder="e.g. 0300-1234567" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-email"><i data-lucide="mail" style="width:14px;height:14px;"></i> Email Address <span class="req">*</span></label>
+                    <input type="email" id="c-email" name="email" placeholder="e.g. fatima@student.iba.edu.pk" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-mentor"><i data-lucide="user-check" style="width:14px;height:14px;"></i> Choose Your Mentor <span class="req">*</span></label>
+                    <select id="c-mentor" name="mentor" required>
+                        <option value="" disabled selected>Select a mentor</option>
+                        <option value="Sara Ahmed – HR Manager, Engro Corporation">Sara Ahmed – HR Manager, Engro (FMCG / HR Strategy)</option>
+                        <option value="Ali Khan – MT, Habib Bank Limited">Ali Khan – MT, Habib Bank (Banking / MT Programmes)</option>
+                        <option value="Zara Mirza – Brand Manager, Unilever Pakistan">Zara Mirza – Brand Manager, Unilever (Marketing / FMCG)</option>
+                        <option value="Usman Raza – Associate, Systems Limited">Usman Raza – Associate, Systems Limited (Tech / IT)</option>
+                        <option value="Nida Hussain – Finance Analyst, Packages Limited">Nida Hussain – Finance Analyst, Packages (Finance / CFA)</option>
+                        <option value="Bilal Qureshi – Strategy Consultant, TPS Pakistan">Bilal Qureshi – Consultant, TPS (Consulting / Strategy)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-interest"><i data-lucide="message-square" style="width:14px;height:14px;"></i> What would you like guidance on? <span class="req">*</span></label>
+                    <textarea id="c-interest" name="guidance_topic" rows="3" placeholder="e.g. I want to understand how to target FMCG marketing roles and improve my CV for brand management positions." required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="c-payment"><i data-lucide="credit-card" style="width:14px;height:14px;"></i> Payment Screenshot (EasyPaisa / JazzCash) <span class="req">*</span></label>
+                    <div class="payment-info">
+                        <i data-lucide="info" style="width:14px;height:14px;"></i>
+                        Send <strong>Rs. 1,000</strong> to <strong>0300-XXXXXXX</strong> (EasyPaisa/JazzCash) then upload screenshot below.
+                    </div>
+                    <div class="file-upload-wrapper" id="c-payment-wrapper">
+                        <input type="file" id="c-payment" name="payment_screenshot" accept="image/*" required onchange="updateFileName('c-payment', 'c-payment-label')">
+                        <label for="c-payment" id="c-payment-label">
+                            <i data-lucide="image" style="width:20px;height:20px;"></i>
+                            <span>Click to upload payment screenshot</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit" id="c-submit-btn">
+                    <i data-lucide="calendar-check" style="width:18px;height:18px;"></i>
+                    Confirm Booking
+                </button>
+                <div class="form-success" id="c-success" style="display:none;">
+                    <i data-lucide="check-circle" style="width:20px;height:20px;"></i>
+                    Booking received! We'll confirm your session slot within 24 hours.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Init Lucide icons
+        lucide.createIcons();
+
+        // Hamburger menu toggle
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('main-nav');
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+
+        // Close nav when link is clicked
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
+        });
+
+        // Modal open/close
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+            // Re-init icons inside modal
+            lucide.createIcons();
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        function closeModalOnOverlay(event, id) {
+            if (event.target === document.getElementById(id)) closeModal(id);
+        }
+
+        // File upload label update
+        function updateFileName(inputId, labelId) {
+            const input = document.getElementById(inputId);
+            const label = document.getElementById(labelId);
+            if (input.files && input.files[0]) {
+                label.querySelector('span').textContent = input.files[0].name;
+                label.classList.add('file-chosen');
+            }
+        }
+
+        // Form submission with Formspree
+        function setupForm(formId, successId, btnId) {
+            const form = document.getElementById(formId);
+            const success = document.getElementById(successId);
+            const btn = document.getElementById(btnId);
+            if (!form) return;
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                btn.disabled = true;
+                btn.innerHTML = '<span style="display:flex;align-items:center;gap:8px;justify-content:center"><svg class="spin" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg> Submitting...</span>';
+
+                const data = new FormData(form);
+                try {
+                    const res = await fetch(form.action, {
+                        method: 'POST',
+                        body: data,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (res.ok) {
+                        form.style.display = 'none';
+                        success.style.display = 'flex';
+                    } else {
+                        btn.disabled = false;
+                        btn.innerHTML = 'Error — Try Again';
+                        alert('Something went wrong. Please try again or contact us directly.');
+                    }
+                } catch (err) {
+                    btn.disabled = false;
+                    btn.textContent = 'Error — Try Again';
+                    alert('Network error. Please try again.');
+                }
+            });
+        }
+
+        setupForm('cv-form-el', 'cv-success', 'cv-submit-btn');
+        setupForm('counselling-form-el', 'c-success', 'c-submit-btn');
+
+        // Sticky navbar shadow
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+    </script>
 </body>
 </html>
