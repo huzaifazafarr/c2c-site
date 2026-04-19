@@ -50,8 +50,8 @@ body {
 }
 .navbar.scrolled { box-shadow: var(--shadow-md); border-bottom-color: transparent; }
 .logo-group { display: flex; align-items: center; gap: 10px; }
-.logo-img { height: 42px; width: auto; object-fit: contain; }
-.footer-logo-img { height: 38px; }
+.logo-img { height: 42px; width: auto; object-fit: contain; mix-blend-mode: multiply; }
+.footer-logo-img { height: 38px; mix-blend-mode: screen; }
 .logo-icon-box {
     width: 42px; height: 42px;
     background: var(--primary-red);
@@ -113,14 +113,6 @@ nav a:hover { color: var(--primary-red); }
 .animate-up-delay { animation: fadeUp 0.8s 0.2s ease both; }
 
 .hero-text { flex: 1.1; }
-.badge-row { margin-bottom: 18px; }
-.hero-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    background: rgba(255,255,255,0.14);
-    border: 1px solid rgba(255,255,255,0.22);
-    padding: 7px 16px; border-radius: 50px;
-    font-size: 0.8rem; font-weight: 600;
-}
 h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.08; margin-bottom: 20px; letter-spacing: -0.5px; }
 .hero-highlight { opacity: 0.8; }
 .hero-text > p { font-size: 1.05rem; opacity: 0.88; margin-bottom: 34px; max-width: 460px; line-height: 1.7; }
@@ -164,7 +156,9 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.08; margin-bottom: 20px
     box-shadow: 0 30px 70px rgba(0,0,0,0.35);
     display: block;
     object-fit: cover;
+    object-position: center;
     height: 420px;
+    image-rendering: auto;
 }
 .hero-float-card {
     position: absolute;
