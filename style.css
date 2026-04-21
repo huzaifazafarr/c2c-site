@@ -87,7 +87,7 @@ nav a:hover { color: var(--primary-red); }
 }
 .hero-bg-img {
     position: absolute; inset: 0;
-    background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&q=75');
+    background-image: url('../images/hero.jpg');
     background-size: cover;
     background-position: center 30%;
     opacity: 0.18;
