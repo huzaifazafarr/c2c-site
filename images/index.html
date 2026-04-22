@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C2C - Campus to Corporate</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="logo-group">
+            <img src="images/logo.png" alt="C2C Logo" class="logo-img"
+                 onerror="this.style.display='none';document.getElementById('logo-fallback').style.display='flex'">
+            <div class="logo-icon-box" id="logo-fallback" style="display:none;">
+                <i data-lucide="graduation-cap" class="logo-icon-svg"></i>
+            </div>
+            <div class="logo-info">
+                <span class="brand-name">C2C</span>
+                <span class="tagline">Campus to Corporate</span>
+            </div>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Open menu">
+            <i data-lucide="menu"></i>
+        </button>
+        <nav id="main-nav">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#mentors">Mentors</a>
+            <a href="#universities">Universities</a>
+            <a href="#contact">Contact</a>
+            <a href="#" class="btn-get-started" onclick="window.open('https://forms.gle/PofGFChQQaT5TSKC9','_blank');return false;">Get Started</a>
+        </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg-img"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <div class="hero-text animate-up">
+                <h1>Your Bridge from<br><span class="hero-highlight">Campus</span> to Corporate</h1>
+                <p>Professional CV reviews, ATS checks, and 1-on-1 mentorship built for university students.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="window.open('https://forms.gle/PofGFChQQaT5TSKC9','_blank')">
+                        <i data-lucide="file-text" style="width:17px;height:17px;"></i>
+                        Get CV Reviewed · Rs. 500
+                    </button>
+                    <button class="btn-secondary" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">
+                        <i data-lucide="calendar" style="width:17px;height:17px;"></i>
+                        Book a Session
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><strong>2,000+</strong><span>Students We Aim to Reach</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><strong>50+</strong><span>Universities We Aim to Cover</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><strong>95%</strong><span>Success Rate We Aim For</span></div>
+                </div>
+            </div>
+            <div class="hero-image-side animate-up-delay">
+                <div class="hero-img-frame">
+                    <img src="images/hero.jpg" alt="IBA Karachi Campus" class="hero-main-photo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-img-col reveal">
+                    <div class="about-img-stack">
+                        <img src="https://images.unsplash.com/photo-1543269664-56d93c1b41a6?w=600&q=80"
+                             alt="Students at IBA" class="about-img-main">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&q=80"
+                             alt="Teamwork" class="about-img-secondary">
+                        <div class="about-float-stat">
+                            <strong>Founded at</strong><span>IBA Karachi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-right reveal">
+                    <span class="section-label">Who We Are</span>
+                    <h2>Bridging Education and Employment</h2>
+                    <p>C2C is a student-founded career preparation platform built at IBA Karachi. We connect students with real HR professionals, management trainees, and industry mentors through structured, affordable services rooted in the Pakistani corporate context.</p>
+                    <div class="about-vision">
+                        <div class="vision-icon"><i data-lucide="target"></i></div>
+                        <div>
+                            <strong>Our Vision</strong>
+                            <p>To become Pakistan's most trusted career preparation platform, expanding from IBA Karachi to every major university across the country.</p>
+                        </div>
+                    </div>
+                    <div class="about-pills">
+                        <span class="pill"><i data-lucide="check-circle" style="width:13px;height:13px;"></i> Pakistan-specific guidance</span>
+                        <span class="pill"><i data-lucide="check-circle" style="width:13px;height:13px;"></i> Direct recruiter access</span>
+                        <span class="pill"><i data-lucide="check-circle" style="width:13px;height:13px;"></i> Student-friendly pricing</span>
+                        <span class="pill"><i data-lucide="check-circle" style="width:13px;height:13px;"></i> IBA-founded and student-run</span>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-label">What We Offer</span>
+                <h2>Our Services</h2>
+                <p>Affordable, professional solutions designed for Pakistani students.</p>
+            </div>
+            <div class="services-grid">
+
+                <div class="service-card reveal">
+                    <div class="svc-img-wrap">
+                        <img src="images/cv-service.jpg" alt="CV Review"
+                             onerror="this.src='https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=80'">
+                        <span class="svc-tag popular">Most Popular</span>
+                    </div>
+                    <div class="svc-body">
+                        <div class="svc-header-row">
+                            <div class="svc-icon-wrap"><i data-lucide="file-text"></i></div>
+                            <span class="price-tag">Rs. 500</span>
+                        </div>
+                        <h3>CV Review Service</h3>
+                        <p class="svc-desc">ATS-optimized CV reviewed by professionals who understand Pakistani recruiters.</p>
+                        <ul class="card-list">
+                            <li><i data-lucide="check"></i> ATS-friendly formatting</li>
+                            <li><i data-lucide="check"></i> Industry-specific keywords</li>
+                            <li><i data-lucide="check"></i> 2 rounds of revisions</li>
+                            <li><i data-lucide="check"></i> 48-hour delivery</li>
+                        </ul>
+                        <button class="btn-card" onclick="window.open('https://forms.gle/PofGFChQQaT5TSKC9','_blank')">Get Started <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></button>
+                    </div>
+                </div>
+
+                <div class="service-card reveal reveal-delay1">
+                    <div class="svc-img-wrap">
+                        <img src="images/ats-service.jpg" alt="ATS Checker"
+                             onerror="this.src='https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80'">
+                        <span class="svc-tag free">Free Tool</span>
+                    </div>
+                    <div class="svc-body">
+                        <div class="svc-header-row">
+                            <div class="svc-icon-wrap blue"><i data-lucide="search"></i></div>
+                            <span class="price-tag free-price">Free</span>
+                        </div>
+                        <h3>ATS Score Checker</h3>
+                        <p class="svc-desc">Get an instant ATS compatibility score with keyword analysis and format validation.</p>
+                        <ul class="card-list">
+                            <li><i data-lucide="check"></i> Instant scoring</li>
+                            <li><i data-lucide="check"></i> Keyword gap analysis</li>
+                            <li><i data-lucide="check"></i> Format validation</li>
+                            <li><i data-lucide="check"></i> No payment required</li>
+                        </ul>
+                        <button class="btn-card btn-blue" onclick="window.open('https://forms.gle/PofGFChQQaT5TSKC9','_blank')">Check My CV <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></button>
+                    </div>
+                </div>
+
+                <div class="service-card highlighted-card reveal reveal-delay2">
+                    <div class="svc-img-wrap">
+                        <img src="images/mentorship.jpg" alt="Career Counselling"
+                             onerror="this.src='https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&q=80'">
+                        <span class="svc-tag expert">Expert Guidance</span>
+                    </div>
+                    <div class="svc-body">
+                        <div class="svc-header-row">
+                            <div class="svc-icon-wrap red"><i data-lucide="users"></i></div>
+                            <span class="price-tag">Rs. 1,000</span>
+                        </div>
+                        <h3>Career Counselling</h3>
+                        <p class="svc-desc">One-on-one session covering career clarity, application strategy, and interview preparation.</p>
+                        <ul class="card-list">
+                            <li><i data-lucide="check"></i> 60-minute session</li>
+                            <li><i data-lucide="check"></i> Real HR professionals</li>
+                            <li><i data-lucide="check"></i> Personalized career roadmap</li>
+                            <li><i data-lucide="check"></i> Follow-up resource sheet</li>
+                        </ul>
+                        <button class="btn-card" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book a Session <i data-lucide="arrow-right" style="width:15px;height:15px;"></i></button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-label">The Process</span>
+                <h2>How It Works</h2>
+            </div>
+            <div class="steps-row">
+                <div class="step reveal">
+                    <div class="step-num">01</div>
+                    <div class="step-icon"><i data-lucide="upload-cloud"></i></div>
+                    <h4>Submit Your Request</h4>
+                    <p>Fill in the form and upload your CV or select a mentor.</p>
+                </div>
+                <div class="step-arrow"><i data-lucide="chevron-right"></i></div>
+                <div class="step reveal reveal-delay1">
+                    <div class="step-num">02</div>
+                    <div class="step-icon"><i data-lucide="credit-card"></i></div>
+                    <h4>Confirm Payment</h4>
+                    <p>Pay via EasyPaisa or JazzCash and upload the screenshot.</p>
+                </div>
+                <div class="step-arrow"><i data-lucide="chevron-right"></i></div>
+                <div class="step reveal reveal-delay2">
+                    <div class="step-num">03</div>
+                    <div class="step-icon"><i data-lucide="check-circle"></i></div>
+                    <h4>Get Your Results</h4>
+                    <p>Receive structured feedback or your session confirmation within 48 hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENTORS -->
+    <section id="mentors" class="mentors-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-label">Meet the Mentors</span>
+                <h2>Book a Session With an Expert</h2>
+                <p>Working professionals who understand the Pakistani job market.</p>
+            </div>
+            <div class="mentors-grid">
+
+                <div class="mentor-card reveal">
+                    <div class="mentor-img">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=300&q=80" alt="Sara Ahmed">
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Sara Ahmed</h4>
+                        <span class="mentor-role">HR Manager · Engro Corporation</span>
+                        <p class="mentor-bio">6 years in talent acquisition at one of Pakistan's leading conglomerates. Specialises in FMCG and manufacturing hiring.</p>
+                        <div class="mentor-tags">
+                            <span>FMCG</span><span>HR Strategy</span><span>Interview Prep</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book Session</button>
+                </div>
+
+                <div class="mentor-card reveal reveal-delay1">
+                    <div class="mentor-img">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80" alt="Ali Khan">
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Ali Khan</h4>
+                        <span class="mentor-role">Management Trainee · Habib Bank</span>
+                        <p class="mentor-bio">Completed HBL's MT programme. Guides students through banking applications, assessment centres, and case interviews.</p>
+                        <div class="mentor-tags">
+                            <span>Banking</span><span>MT Programmes</span><span>Case Studies</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book Session</button>
+                </div>
+
+                <div class="mentor-card reveal reveal-delay2">
+                    <div class="mentor-img">
+                        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=300&q=80" alt="Zara Mirza">
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Zara Mirza</h4>
+                        <span class="mentor-role">Brand Manager · Unilever Pakistan</span>
+                        <p class="mentor-bio">IBA alumna in Unilever's marketing division. Helps students break into FMCG marketing and brand management roles.</p>
+                        <div class="mentor-tags">
+                            <span>Marketing</span><span>Brand Strategy</span><span>FMCG</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book Session</button>
+                </div>
+
+                <div class="mentor-card reveal">
+                    <div class="mentor-img">
+                        <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=300&q=80" alt="Usman Raza">
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Usman Raza</h4>
+                        <span class="mentor-role">Associate · Systems Limited</span>
+                        <p class="mentor-bio">Software engineer experienced in technical interviews and coding assessments. The go-to mentor for CS and IT students.</p>
+                        <div class="mentor-tags">
+                            <span>Tech / IT</span><span>Technical Interviews</span><span>CV for CS</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book Session</button>
+                </div>
+
+                <div class="mentor-card reveal reveal-delay1">
+                    <div class="mentor-img">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&q=80" alt="Nida Hussain">
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Nida Hussain</h4>
+                        <span class="mentor-role">Finance Analyst · Packages Limited</span>
+                        <p class="mentor-bio">CFA Level 1 candidate. Guides students into corporate finance roles including FP&amp;A, treasury, and management accounting.</p>
+                        <div class="mentor-tags">
+                            <span>Finance</span><span>CFA Pathway</span><span>Corporate Finance</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book Session</button>
+                </div>
+
+                <div class="mentor-card reveal reveal-delay2">
+                    <div class="mentor-img">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&q=80" alt="Bilal Qureshi">
+                    </div>
+                    <div class="mentor-info">
+                        <h4>Bilal Qureshi</h4>
+                        <span class="mentor-role">Strategy Consultant · TPS Pakistan</span>
+                        <p class="mentor-bio">Helps students structure analytical thinking for consulting roles and present themselves as business-ready graduates.</p>
+                        <div class="mentor-tags">
+                            <span>Consulting</span><span>Strategy</span><span>Problem Solving</span>
+                        </div>
+                    </div>
+                    <button class="btn-mentor" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank')">Book Session</button>
+                </div>
+
+            </div>
+            <p class="mentor-note">
+                <i data-lucide="info" style="width:14px;height:14px;"></i>
+                More mentors being onboarded. <a href="#contact">Reach out</a> if you'd like to volunteer.
+            </p>
+        </div>
+    </section>
+
+    <!-- UNIVERSITIES -->
+    <section id="universities" class="trusted-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-label">Our Reach</span>
+                <h2>Trusted Across Top Universities</h2>
+            </div>
+            <div class="uni-grid">
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> IBA Karachi</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> NUST</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> LUMS</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> FAST-NUCES</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> GIKI</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> COMSATS</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> UET</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> NED University</div>
+                <div class="uni-card"><i data-lucide="building-2" style="width:14px;height:14px;"></i> Karachi University</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLACEMENTS -->
+    <section class="placements-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-label">Alumni Placements</span>
+                <h2>Our Students Work At</h2>
+            </div>
+            <div class="company-grid">
+                <div class="company-card"><i data-lucide="briefcase" style="width:14px;height:14px;"></i> Systems Limited</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:14px;height:14px;"></i> TPS Pakistan</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:14px;height:14px;"></i> Engro Corporation</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:14px;height:14px;"></i> Unilever Pakistan</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:14px;height:14px;"></i> Packages Limited</div>
+                <div class="company-card"><i data-lucide="briefcase" style="width:14px;height:14px;"></i> Habib Bank Limited</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-label">Get In Touch</span>
+                <h2>Contact Us</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-card reveal">
+                    <div class="contact-icon"><i data-lucide="message-circle"></i></div>
+                    <h4>WhatsApp Community</h4>
+                    <p>Join our free student community for tips, resources, and peer support.</p>
+                    <a href="https://wa.me/923001234567" target="_blank" class="contact-link">Join on WhatsApp <i data-lucide="external-link" style="width:12px;height:12px;"></i></a>
+                </div>
+                <div class="contact-card reveal reveal-delay1">
+                    <div class="contact-icon"><i data-lucide="instagram"></i></div>
+                    <h4>Instagram</h4>
+                    <p>Follow for career tips, student testimonials, and announcements.</p>
+                    <a href="https://instagram.com/c2c.iba" target="_blank" class="contact-link">@c2c.iba <i data-lucide="external-link" style="width:12px;height:12px;"></i></a>
+                </div>
+                <div class="contact-card reveal reveal-delay2">
+                    <div class="contact-icon"><i data-lucide="mail"></i></div>
+                    <h4>Email Us</h4>
+                    <p>For partnerships, mentor onboarding, or university collaborations.</p>
+                    <a href="mailto:hello@c2c-iba.com" class="contact-link">hello@c2c-iba.com <i data-lucide="external-link" style="width:12px;height:12px;"></i></a>
+                </div>
+                <div class="contact-card reveal reveal-delay2">
+                    <div class="contact-icon"><i data-lucide="map-pin"></i></div>
+                    <h4>Based At</h4>
+                    <p>Institute of Business Administration, University Road, Karachi.</p>
+                    <span class="contact-link-static">IBA Karachi, Pakistan</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <div class="logo-group" style="margin-bottom:14px;">
+                    <img src="images/logo.png" alt="C2C Logo" class="logo-img footer-logo-img"
+                         onerror="this.style.display='none';document.getElementById('footer-logo-fallback').style.display='flex'">
+                    <div class="logo-icon-box" id="footer-logo-fallback" style="display:none;">
+                        <i data-lucide="graduation-cap" class="logo-icon-svg"></i>
+                    </div>
+                    <div class="logo-info">
+                        <span class="brand-name" style="color:white;">C2C</span>
+                        <span class="tagline" style="color:rgba(255,255,255,0.4);">Campus to Corporate</span>
+                    </div>
+                </div>
+                <p>Empowering university students to navigate the corporate world — affordably, accessibly, and with confidence.</p>
+            </div>
+            <div class="footer-links">
+                <h5>Quick Links</h5>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#mentors">Mentors</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="footer-links">
+                <h5>Services</h5>
+                <a href="#" onclick="window.open('https://forms.gle/PofGFChQQaT5TSKC9','_blank');return false;">CV Review · Rs. 500</a>
+                <a href="#" onclick="window.open('https://forms.gle/rY9ZMT5jmUL1wzfx5','_blank');return false;">Career Counselling · Rs. 1,000</a>
+                <a href="#" onclick="window.open('https://forms.gle/PofGFChQQaT5TSKC9','_blank');return false;">ATS Check · Free</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Campus to Corporate (C2C) · IBA Karachi. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        lucide.createIcons();
+
+        // Hamburger
+        document.getElementById('hamburger').addEventListener('click', () => {
+            document.getElementById('main-nav').classList.toggle('open');
+        });
+        document.getElementById('main-nav').querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => document.getElementById('main-nav').classList.remove('open'));
+        });
+
+        // Navbar shadow on scroll
+        window.addEventListener('scroll', () => {
+            document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 10);
+        });
+
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('revealed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
