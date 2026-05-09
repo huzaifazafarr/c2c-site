@@ -409,8 +409,16 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.08; margin-bottom: 20px
 }
 .mentor-company-logo {
     display: flex; justify-content: center; align-items: center;
-    min-height: 44px;
+    min-height: 52px;
     margin-bottom: 4px;
+    padding: 0 10px;
+}
+.company-logo-img {
+    max-height: 48px;
+    max-width: 140px;
+    width: auto;
+    object-fit: contain;
+    display: block;
 }
 .btn-mentor {
     margin: 14px 20px 18px;
@@ -445,17 +453,24 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.08; margin-bottom: 20px
 
 /* ===================== PLACEMENTS ===================== */
 .placements-section { padding: 80px 0; background: var(--light-grey); }
-.company-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
+.company-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; }
 .company-card {
-    display: flex; align-items: center; gap: 8px;
-    background: var(--primary-red); color: white;
-    padding: 13px 24px; border-radius: 12px;
-    font-weight: 700; min-width: 155px;
-    justify-content: center;
-    transition: background 0.2s, transform 0.2s;
-    font-size: 0.9rem;
+    display: flex; align-items: center; justify-content: center;
+    background: white;
+    padding: 16px 28px; border-radius: 14px;
+    border: 1.5px solid var(--border);
+    min-width: 160px; min-height: 80px;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s, transform 0.2s;
 }
-.company-card:hover { background: var(--dark-red); transform: translateY(-2px); }
+.company-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.partner-logo-img {
+    max-height: 50px;
+    max-width: 150px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
 
 /* ===================== CONTACT ===================== */
 .contact-section { padding: 100px 0; background: #fff; }
