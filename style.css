@@ -409,16 +409,21 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.08; margin-bottom: 20px
 }
 .mentor-company-logo {
     display: flex; justify-content: center; align-items: center;
-    min-height: 52px;
+    min-height: 64px;
     margin-bottom: 4px;
-    padding: 0 10px;
+    padding: 0 14px;
 }
 .company-logo-img {
-    max-height: 48px;
-    max-width: 140px;
+    max-height: 56px;
+    max-width: 160px;
     width: auto;
     object-fit: contain;
     display: block;
+}
+/* K-Electric logo needs more room to match EBM size */
+.company-logo-img[alt="K-Electric"] {
+    max-height: 64px;
+    max-width: 130px;
 }
 .btn-mentor {
     margin: 14px 20px 18px;
@@ -465,11 +470,15 @@ h1 { font-size: 3.5rem; font-weight: 800; line-height: 1.08; margin-bottom: 20px
 }
 .company-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
 .partner-logo-img {
-    max-height: 50px;
-    max-width: 150px;
+    max-height: 56px;
+    max-width: 160px;
     width: auto;
     object-fit: contain;
     display: block;
+}
+.partner-logo-img[alt="K-Electric"] {
+    max-height: 64px;
+    max-width: 130px;
 }
 
 /* ===================== CONTACT ===================== */
